@@ -19,11 +19,8 @@
     </model-viewer>
 
     <script>
-        // Get the model parameter from the URL
         const urlParams = new URLSearchParams(window.location.search);
-        const modelName = urlParams.get('model'); // Model name passed as parameter
-
-        // Set the model source based on the parameter
+        const modelName = urlParams.get('model');
         const modelViewer = document.getElementById('viewer');
         if (modelName) {
             modelViewer.src = modelName + '.glb';
