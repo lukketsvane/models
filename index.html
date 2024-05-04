@@ -4,29 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Model Viewer</title>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="https://modelviewer.dev/shared-assets/styles/style.css"> <!-- If there's a specific stylesheet you want to include -->
+    <script type="module" src="https://modelviewer.dev/packages/model-viewer/model-viewer.js"></script>
 </head>
 <body>
-    <model-viewer 
-        id="viewer"
-        alt="Interactive 3D Model"
-        ar 
-        environment-image="shared-assets/environments/moon_1k.hdr"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y"
+    <model-viewer
+        src="model_1.glb"
+        alt="A 3D model of an object"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        camera-controls
+        tone-mapping="neutral"
+        poster="poster.webp"  <!-- Replace 'poster.webp' with the path to your poster image -->
+        shadow-intensity="1"
         style="width: 100%; height: 100vh;">
-    </model-viewer>
 
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const modelName = urlParams.get('model');
-        const modelViewer = document.getElementById('viewer');
-        if (modelName) {
-            modelViewer.src = modelName + '.glb';
-        } else {
-            modelViewer.src = 'model_1.glb'; // Default model if no parameter is specified
-        }
-    </script>
+        <div slot="ar-button" id="ar-prompt"> <!-- Use the 'slot' attribute to customize AR button -->
+            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+        </div>
+    </model-viewer>
 </body>
 </html>
