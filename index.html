@@ -8,20 +8,24 @@
     <script type="module" src="https://modelviewer.dev/packages/model-viewer/model-viewer.js"></script>
 </head>
 <body>
-    <model-viewer
-        src="model_1.glb"
-        alt="A 3D model of an object"
-        ar
-        ar-modes="webxr scene-viewer quick-look"
-        camera-controls
-        tone-mapping="neutral"
-        poster="poster.webp"  <!-- Replace 'poster.webp' with the path to your poster image -->
-        shadow-intensity="1"
-        style="width: 100%; height: 100vh;">
+<model-viewer
+    src="model_1.glb"
+    alt="A 3D model of an object"
+    ar
+    ar-modes="quick-look"
+    camera-controls
+    tone-mapping="neutral"
+    poster="poster.webp"
+    shadow-intensity="1"
+    camera-orbit="-0.3872deg 66.27deg 1.103m"
+    field-of-view="73.18deg">
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
 
-        <div slot="ar-button" id="ar-prompt"> <!-- Use the 'slot' attribute to customize AR button -->
-            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-        </div>
-    </model-viewer>
 </body>
 </html>
