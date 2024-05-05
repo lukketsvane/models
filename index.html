@@ -1,40 +1,89 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<html>
-<head>
-    <title>3D Models Collection</title>
-</head>
-<body>
-    <h1>Welcome to My 3D Models Collection</h1>
-    <ul>
-        <li><a href="model_1/index.html">Model 1</a></li>
-        <li><a href="model_2/index.html">Model 2</a></li>
-        <!-- Add additional models as needed -->
-=======
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Models Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 300px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            height: 100vh; /* Full height */
+            overflow: auto; /* Enable scrolling if the sidebar is too tall */
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #fff;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 8px 16px;
+            transition: background-color 0.3s;
+        }
+        li a:hover {
+            background-color: #ddd;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3x3 grid */
+            gap: 10px;
+        }
+        .grid iframe {
+            width: 100%;
+            height: 200px; /* Fixed height, adjust as needed */
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My 3D Models Showcase</h1>
-    <p>Select a model to view:</p>
-    <ul>
-        <li><a href="model_1/index.html">Model 1</a></li>
-        <li><a href="model_2/index.html">Model 2</a></li>
-        <li><a href="model_3/index.html">Model 3</a></li>
-        <li><a href="model_4/index.html">Model 4</a></li>
-        <li><a href="model_5/index.html">Model 5</a></li>
-        <li><a href="model_6/index.html">Model 6</a></li>
-        <li><a href="model_7/index.html">Model 7</a></li>
-        <li><a href="model_8/index.html">Model 8</a></li>
-        <li><a href="model_9/index.html">Model 9</a></li>
-        <li><a href="model_10/index.html">Model 10</a></li>
-        <li><a href="model_11/index.html">Model 11</a></li>
-        <li><a href="model_12/index.html">Model 12</a></li>
-        <li><a href="model_13/index.html">Model 13</a></li>
->>>>>>> e55bf83 (y)
-    </ul>
+    <div class="sidebar">
+        <h1>Model Links</h1>
+        <ul>
+            <li><a href="model_1/index.html">Model 1</a></li>
+            <li><a href="model_2/index.html">Model 2</a></li>
+            <li><a href="model_3/index.html">Model 3</a></li>
+            <li><a href="model_4/index.html">Model 4</a></li>
+            <li><a href="model_5/index.html">Model 5</a></li>
+            <li><a href="model_6/index.html">Model 6</a></li>
+            <li><a href="model_7/index.html">Model 7</a></li>
+            <li><a href="model_8/index.html">Model 8</a></li>
+            <li><a href="model_9/index.html">Model 9</a></li>
+            <li><a href="model_10/index.html">Model 10</a></li>
+            <li><a href="model_11/index.html">Model 11</a></li>
+            <li><a href="model_12/index.html">Model 12</a></li>
+            <li><a href="model_13/index.html">Model 13</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>3D Models Display</h1>
+        <div class="grid">
+            <!-- Example embeds, replace src with actual URLs as needed -->
+            <iframe src="model_1/model_1.glb"></iframe>
+            <iframe src="model_2/model_2.glb"></iframe>
+            <iframe src="model_3/model_3.glb"></iframe>
+            <iframe src="model_4/model_4.glb"></iframe>
+            <iframe src="model_5/model_5.glb"></iframe>
+            <iframe src="model_6/model_6.glb"></iframe>
+            <iframe src="model_7/model_7.glb"></iframe>
+            <iframe src="model_8/model_8.glb"></iframe>
+            <iframe src="model_9/model_9.glb"></iframe>
+            <!-- Add more iframes as needed -->
+        </div>
+    </div>
 </body>
 </html>
