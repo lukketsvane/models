@@ -1,17 +1,20 @@
 #!/bin/bash
 
-# Define base directory for the models (assuming you're in the root directory of your repo)
+# Define the base directory for the models (assuming you're in the root directory of your repository)
 base_dir="."
 
-# Loop through model numbers 1 to 13
-for i in {1..13}
+# Start with model 14 and end with model 32
+for i in {14..32}
 do
     # Create directory if not exists
     mkdir -p "$base_dir/model_$i"
 
-    # Move the model file into the correct directory
-    # Correcting any typo in names such as 'moel_9.glb' to 'model_9.glb'
-    mv "$base_dir/models/model_$i.glb" "$base_dir/model_$i/model_$i.glb" 2>/dev/null || echo "Model file for model_$i not found. Skipping."
+    # Check if GLB file exists to move, if not print a warning
+    if [ -f "$base_dir/models/model_$i.glb" ]; then
+        mv "$base_dir/models/model_$i.glb" "$base_dir/model_$i/model_$i.glb"
+    else
+        echo "Model file model_$i.glb not found. Skipping file move."
+    fi
 
     # Create the index.html with the necessary HTML setup
     cat > "$base_dir/model_$i/index.html" <<EOF
@@ -53,4 +56,4 @@ EOF
     echo "Setup completed for model_$i"
 done
 
-echo "All models are set up."
+echo "All models from 14 to 32 are set up."
