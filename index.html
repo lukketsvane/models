@@ -14,9 +14,9 @@
             min-height: 100vh;
         }
         .sidebar {
-            width: 160px;
+            width: 200px;
             background-color: #f4f4f4;
-            padding: 20px;
+            padding: 10px; /* Reduced padding */
             height: 100vh; /* Full height */
             overflow: auto; /* Enable scrolling if the sidebar is too tall */
         }
@@ -28,12 +28,13 @@
         ul {
             list-style-type: none;
             padding: 0;
+            margin: 0; /* Remove default margin */
         }
         li a {
             text-decoration: none;
             color: #333;
             display: block;
-            padding: 4px 12px;
+            padding: 4px 8px; /* Reduced padding for more compact links */
             transition: background-color 0.3s;
         }
         li a:hover {
