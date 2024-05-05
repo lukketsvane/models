@@ -39,9 +39,6 @@ do
         auto-rotate
         style="width: 100%; height: 100vh;">
 
-        <button slot="ar-button" id="ar-button">
-            View in your space
-        </button>
         <div slot="progress-bar" class="hide">
             <div class="update-bar"></div>
         </div>

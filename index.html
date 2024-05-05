@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Models Showcase</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer@latest"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -43,10 +44,9 @@
             grid-template-columns: repeat(3, 1fr); /* 3x3 grid */
             gap: 10px;
         }
-        .grid iframe {
+        .grid model-viewer {
             width: 100%;
-            height: 200px; /* Fixed height, adjust as needed */
-            border: none;
+            height: 300px; /* Adjust height as necessary */
         }
     </style>
 </head>
@@ -54,6 +54,7 @@
     <div class="sidebar">
         <h1>Model Links</h1>
         <ul>
+            <!-- Generate links for each model dynamically -->
             <li><a href="model_1/index.html">Model 1</a></li>
             <li><a href="model_2/index.html">Model 2</a></li>
             <li><a href="model_3/index.html">Model 3</a></li>
@@ -67,22 +68,58 @@
             <li><a href="model_11/index.html">Model 11</a></li>
             <li><a href="model_12/index.html">Model 12</a></li>
             <li><a href="model_13/index.html">Model 13</a></li>
+            <li><a href="model_14/index.html">Model 14</a></li>
+            <li><a href="model_15/index.html">Model 15</a></li>
+            <li><a href="model_16/index.html">Model 16</a></li>
+            <li><a href="model_17/index.html">Model 17</a></li>
+            <li><a href="model_18/index.html">Model 18</a></li>
+            <li><a href="model_19/index.html">Model 19</a></li>
+            <li><a href="model_20/index.html">Model 20</a></li>
+            <li><a href="model_21/index.html">Model 21</a></li>
+            <li><a href="model_22/index.html">Model 22</a></li>
+            <li><a href="model_23/index.html">Model 23</a></li>
+            <li><a href="model_24/index.html">Model 24</a></li>
+            <li><a href="model_25/index.html">Model 25</a></li>
+            <li><a href="model_26/index.html">Model 26</a></li>
+            <li><a href="model_27/index.html">Model 27</a></li>
+            <li><a href="model_28/index.html">Model 28</a></li>
+            <li><a href="model_29/index.html">Model 29</a></li>
+            <li><a href="model_30/index.html">Model 30</a></li>
+            <li><a href="model_31/index.html">Model 31</a></li>
+            <li><a href="model_32/index.html">Model 32</a></li>
+            <li><a href="model_33/index.html">Model 33</a></li>
         </ul>
     </div>
     <div class="content">
         <h1>3D Models Display</h1>
         <div class="grid">
-            <!-- Example embeds, replace src with actual URLs as needed -->
-            <iframe src="model_1/model_1.glb"></iframe>
-            <iframe src="model_2/model_2.glb"></iframe>
-            <iframe src="model_3/model_3.glb"></iframe>
-            <iframe src="model_4/model_4.glb"></iframe>
-            <iframe src="model_5/model_5.glb"></iframe>
-            <iframe src="model_6/model_6.glb"></iframe>
-            <iframe src="model_7/model_7.glb"></iframe>
-            <iframe src="model_8/model_8.glb"></iframe>
-            <iframe src="model_9/model_9.glb"></iframe>
-            <!-- Add more iframes as needed -->
+            <model-viewer src="model_1/model_1.glb" alt="3D Model 1" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate style="width: 100%; height: 300px;">
+                <button slot="ar-button">View in your space</button>
+            </model-viewer>
+            <model-viewer src="model_2/model_2.glb" alt="3D Model 2" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate style="width: 100%; height: 300px;">
+                <button slot="ar-button">View in your space</button>
+            </model-viewer>
+            <model-viewer src="model_3/model_3.glb" alt="3D Model 3" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate style="width: 100%; height: 300px;">
+                <button slot="ar-button">View in your space</button>
+            </model-viewer>
+            <model-viewer src="model_4/model_4.glb" alt="3D Model 4" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate style="width: 100%; height: 300px;">
+                <button slot="ar-button">View in your space</button>
+            </model-viewer>
+            <model-viewer src="model_5/model_5.glb" alt="3D Model 5" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate style="width: 100%; height: 300px;">
+                <button slot="ar-button">View in your space</button>
+            </model-viewer>
+            <model-viewer src="model_6/model_6.glb" alt="3D Model 6" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate style="width: 100%; height: 300px;">
+                <button slot="ar-button">View in your space</button>
+            </model-viewer>
+            <model-viewer src="model_7/model_7.glb" alt="3D Model 7" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate style="width: 100%; height: 300px;">
+                <button slot="ar-button">View in your space</button>
+            </model-viewer>
+            <model-viewer src="model_8/model_8.glb" alt="3D Model 8" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate style="width: 100%; height: 300px;">
+                <button slot="ar-button">View in your space</button>
+            </model-viewer>
+            <model-viewer src="model_9/model_9.glb" alt="3D Model 9" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate style="width: 100%; height: 300px;">
+                <button slot="ar-button">View in your space</button>
+            </model-viewer>
         </div>
     </div>
 </body>
